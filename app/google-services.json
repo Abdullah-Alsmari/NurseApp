@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "208885388250",
+    "project_id": "nurseapp-cae05",
+    "storage_bucket": "nurseapp-cae05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208885388250:android:bacfa4d9c2dd8326fea6e3",
+        "android_client_info": {
+          "package_name": "com.example.nurseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208885388250-g27tgo9s3qnpiqqn5tgdvvn348e4m6hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFgbwpwWvug8BbLIHh0ayRxhE3tQUkdn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208885388250-g27tgo9s3qnpiqqn5tgdvvn348e4m6hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
