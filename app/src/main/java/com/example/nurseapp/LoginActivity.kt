@@ -11,15 +11,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var signIn : Button
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
         signIn = findViewById(R.id.signIn)
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
@@ -66,6 +65,8 @@ class MainActivity : AppCompatActivity() {
                     Log.i("infoo",user!!.displayName.toString())
                     Log.i("infoo",user!!.email.toString())
                     Toast.makeText(this,"Sign in Successful\n"+user!!.displayName.toString(),Toast.LENGTH_LONG).show()
+                    val intent = Intent(this,DashboardActivity::class.java)
+                    startActivity(intent)
 //                    updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
