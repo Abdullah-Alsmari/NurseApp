@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "208885388250",
-    "project_id": "nurseapp-cae05",
-    "storage_bucket": "nurseapp-cae05.appspot.com"
+    "project_number": "223065949340",
+    "project_id": "nurseandroidapp-75319",
+    "storage_bucket": "nurseandroidapp-75319.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:208885388250:android:bacfa4d9c2dd8326fea6e3",
+        "mobilesdk_app_id": "1:223065949340:android:346d95f26327ba14a85959",
         "android_client_info": {
-          "package_name": "com.example.nurseapp"
+          "package_name": "com.abdullah.nurseapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "208885388250-g27tgo9s3qnpiqqn5tgdvvn348e4m6hh.apps.googleusercontent.com",
+          "client_id": "223065949340-j4mcaglk86om991t79g09n04njflfbp2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAFgbwpwWvug8BbLIHh0ayRxhE3tQUkdn0"
+          "current_key": "AIzaSyD70i3wIJE-7stD_CRlqO3ksax6d79dZgY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "208885388250-g27tgo9s3qnpiqqn5tgdvvn348e4m6hh.apps.googleusercontent.com",
+              "client_id": "223065949340-j4mcaglk86om991t79g09n04njflfbp2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,4 +1,4 @@
-package com.example.nurseapp
+package com.abdullah.nurseapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
