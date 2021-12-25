@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.example.nurseapp.utils.*
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -65,9 +66,13 @@ class LoginActivity : AppCompatActivity() {
                     Log.i("infoo",user!!.displayName.toString())
                     Log.i("infoo",user!!.email.toString())
                     Toast.makeText(this,"Sign in Successful\n"+user!!.displayName.toString(),Toast.LENGTH_LONG).show()
+                    setPrefsString(this, EMAIL,user!!.email.toString())
+                    setPrefsString(this, USERNAME,user!!.displayName.toString())
+                    setPrefsString(this, PHONENUMBER,user!!.phoneNumber.toString())
+                    setPrefsBoolean(this, ISLOGGEDIN,true)
                     val intent = Intent(this,DashboardActivity::class.java)
                     startActivity(intent)
-//                    updateUI(user)
+                    finish()
                 } else {
                     // If sign in fails, display a message to the user.
 //                    Log.w(TAG, "signInWithCredential:failure", task.exception)
