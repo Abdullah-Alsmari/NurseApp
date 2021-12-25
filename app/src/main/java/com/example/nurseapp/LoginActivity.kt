@@ -1,4 +1,4 @@
-package com.example.nurseapp
+package com.abdullah.nurseapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken("223065949340-j4mcaglk86om991t79g09n04njflfbp2.apps.googleusercontent.com")
             .requestEmail()
             .build()
 
@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
-//                Log.w(TAG, "Google sign in failed", e)
+                Log.w("aa", "Google sign in failed", e)
             }
         }
     }

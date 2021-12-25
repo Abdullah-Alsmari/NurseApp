@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.nurseapp.databinding.FragmentProfileBinding
+import com.abdullah.nurseapp.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
 
