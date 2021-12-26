@@ -3,10 +3,12 @@ package com.example.nurseapp.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.NavDirections
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.abdullah.nurseapp.databinding.ItemHomeBinding
+import com.example.nurseapp.fragment.HomeFragmentDirections
 
 import com.example.nurseapp.model.HomeModel
 
@@ -19,6 +21,16 @@ class HomeGridAdapter() :
         fun bind(item: HomeModel) {
             binding.home = item
             binding.executePendingBindings()
+            binding.cardView.setOnClickListener {
+                if (item.name.equals("X-ray")) {
+                    action = HomeFragmentDirections.actionHomeFragmentToXrayPastHistoryFragment()
+                } else {
+                    action = HomeFragmentDirections.actionHomeFragmentToBloodTestPastHistoryFragment()
+                }
+                binding.root.findNavController()
+                    .navigate(action)
+            }
+
 
         }
     }
