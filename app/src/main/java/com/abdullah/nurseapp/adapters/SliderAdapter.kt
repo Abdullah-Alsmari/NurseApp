@@ -1,4 +1,4 @@
-package com.example.nurseapp.adapters
+package com.abdullah.nurseapp.adapters
 
 
 import android.content.Context
@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.abdullah.nurseapp.R
 import com.bumptech.glide.Glide
-import com.example.nurseapp.model.SliderDataModel
+import com.abdullah.nurseapp.model.SliderDataModel
 
 
 class SliderAdapter(context: Context?, sliderDataArrayList: ArrayList<SliderDataModel>) :

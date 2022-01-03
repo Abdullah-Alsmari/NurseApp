@@ -1,4 +1,4 @@
-package com.example.nurseapp
+package com.abdullah.nurseapp
 
 import org.junit.Test
 

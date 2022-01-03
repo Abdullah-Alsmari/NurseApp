@@ -1,4 +1,4 @@
-package com.example.nurseapp.adapters
+package com.abdullah.nurseapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.abdullah.nurseapp.databinding.ItemHomeBinding
-import com.example.nurseapp.fragment.HomeFragmentDirections
+import com.abdullah.nurseapp.fragment.HomeFragmentDirections
 
-import com.example.nurseapp.model.HomeModel
+import com.abdullah.nurseapp.model.HomeModel
 
 class HomeGridAdapter() :
     ListAdapter<HomeModel, HomeGridAdapter.MovieViewHolder>(DiffCallback) {
