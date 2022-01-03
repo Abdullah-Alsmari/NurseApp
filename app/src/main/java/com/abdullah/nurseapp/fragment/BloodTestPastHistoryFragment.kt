@@ -1,4 +1,4 @@
-package com.example.nurseapp.fragment
+package com.abdullah.nurseapp.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.abdullah.nurseapp.databinding.FragmentBloodTestPastHistoryBinding
-import com.abdullah.nurseapp.databinding.FragmentHomeBinding
-import com.example.nurseapp.adapters.HomeGridAdapter
-import com.example.nurseapp.model.HomeModel
 
 class BloodTestPastHistoryFragment : Fragment(){
 

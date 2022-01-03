@@ -1,4 +1,4 @@
-package com.example.nurseapp.fragment
+package com.abdullah.nurseapp.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.abdullah.nurseapp.LoginActivity
 import com.abdullah.nurseapp.databinding.FragmentProfileBinding
-import com.example.nurseapp.utils.EMAIL
-import com.example.nurseapp.utils.PHONENUMBER
-import com.example.nurseapp.utils.USERNAME
-import com.example.nurseapp.utils.getStringFromPrefs
+import com.abdullah.nurseapp.utils.EMAIL
+import com.abdullah.nurseapp.utils.PHONENUMBER
+import com.abdullah.nurseapp.utils.USERNAME
+import com.abdullah.nurseapp.utils.getStringFromPrefs
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : Fragment() {

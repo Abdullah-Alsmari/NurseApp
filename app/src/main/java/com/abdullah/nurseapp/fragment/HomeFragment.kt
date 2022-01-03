@@ -1,4 +1,4 @@
-package com.example.nurseapp.fragment
+package com.abdullah.nurseapp.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.abdullah.nurseapp.databinding.FragmentHomeBinding
-import com.example.nurseapp.adapters.HomeGridAdapter
-import com.example.nurseapp.model.HomeModel
+import com.abdullah.nurseapp.adapters.HomeGridAdapter
+import com.abdullah.nurseapp.model.HomeModel
 import com.smarteist.autoimageslider.SliderView
 
-import com.example.nurseapp.adapters.SliderAdapter
+import com.abdullah.nurseapp.adapters.SliderAdapter
 
-import android.R
-import com.example.nurseapp.model.SliderDataModel
+import com.abdullah.nurseapp.model.SliderDataModel
 
 
 class HomeFragment : Fragment(){

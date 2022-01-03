@@ -1,15 +1,12 @@
-package com.example.nurseapp
+package com.abdullah.nurseapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import com.abdullah.nurseapp.DashboardActivity
-import com.abdullah.nurseapp.LoginActivity
-import com.abdullah.nurseapp.R
-import com.example.nurseapp.utils.ISLOGGEDIN
-import com.example.nurseapp.utils.getBooleanFromPrefs
+import com.abdullah.nurseapp.utils.ISLOGGEDIN
+import com.abdullah.nurseapp.utils.getBooleanFromPrefs
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

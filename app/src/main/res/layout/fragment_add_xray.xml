@@ -28,13 +28,27 @@
             android:id="@+id/edHospName"/>
 
         <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/edHospName"
+            android:text="Choose from Gallery"
+            android:id="@+id/btnChooseImg"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/previewImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChooseImg"/>
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/btnSubmit"
-            app:layout_constraintTop_toBottomOf="@+id/edHospName"/>
+            app:layout_constraintTop_toBottomOf="@+id/previewImage"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
