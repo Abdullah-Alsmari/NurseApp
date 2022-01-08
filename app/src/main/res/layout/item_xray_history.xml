@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="modelData"
+            type="com.abdullah.nurseapp.model.AddTaskModel" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/cardView"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgDocument"
+            android:layout_width="150dp"
+            app:civ_border_color="@color/colorPrimary"
+            android:layout_height="150dp"
+            app:imageUrl="@{modelData.imgURL}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:text="@{modelData.title}"
+            app:layout_constraintStart_toEndOf="@+id/imgDocument"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvHospital"
+            android:text="@{modelData.hospitalName}"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imgDocument"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imgDelete"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imgShare"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_share_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
