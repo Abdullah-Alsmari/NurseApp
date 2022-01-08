@@ -1,15 +1,14 @@
-package com.example.nurseapp
+package com.abdullah.nurseapp
 
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import com.abdullah.nurseapp.DashboardActivity
-import com.abdullah.nurseapp.LoginActivity
-import com.abdullah.nurseapp.R
-import com.example.nurseapp.utils.ISLOGGEDIN
-import com.example.nurseapp.utils.getBooleanFromPrefs
+import com.abdullah.nurseapp.utils.*
+import java.util.*
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +21,10 @@ class SplashScreen : AppCompatActivity() {
         );
         setContentView(R.layout.activity_splash_screen)
 
+        if (getStringFromPrefs(this, LANGUAGECODE) == "") {
+            setPrefsString(this, LANGUAGECODE,"en")
+        }
+        changeLocale()
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.
         Handler().postDelayed({
@@ -34,5 +37,15 @@ class SplashScreen : AppCompatActivity() {
             }
             finish()
         }, 3000) // 3000 is the delayed time in milliseconds.
+    }
+
+    private fun changeLocale() {
+        val languageCode = getStringFromPrefs(this, LANGUAGECODE)
+        val locale = Locale(languageCode!!)
+        Locale.setDefault(locale)
+        val resources: Resources = resources
+        val config: Configuration = resources.getConfiguration()
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.getDisplayMetrics())
     }
 }
