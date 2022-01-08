@@ -2,10 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:icon="@drawable/ic_home_selected"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/addTaskFragment"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:title="@string/addTask" />
     <item
         android:id="@+id/userProfileFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        android:icon="@drawable/ic_profile_unselected"
+        android:title="@string/profile" />
 </menu>

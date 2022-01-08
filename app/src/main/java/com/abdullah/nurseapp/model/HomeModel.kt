@@ -1,3 +1,3 @@
 package com.abdullah.nurseapp.model
 
-data class HomeModel(val name : String)
+data class HomeModel(val name : String,val icon : Int)

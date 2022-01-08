@@ -15,7 +15,7 @@ import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
-class XrayHistoryViewModel(application: Application) : AndroidViewModel(application) {
+class BloodTestViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _xrayListData = MutableLiveData<List<AddTaskModel>>()
     val xrayListData: LiveData<List<AddTaskModel>>
@@ -35,18 +35,19 @@ class XrayHistoryViewModel(application: Application) : AndroidViewModel(applicat
         databaseReference!!.child(userName).child(key).removeValue()
     }
 
-    fun getXrayHistoryData() {
+    fun getBloodTestHistoryData() {
         val list = mutableListOf<AddTaskModel>()
         var i=0
         databaseReference!!.child(userName).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
                     val university: AddTaskModel = postSnapshot.getValue(AddTaskModel::class.java)!!
-                    if(university.type=="Xray"){
-                        list.add(university)
-                        list[i].key = postSnapshot.key.toString()
-                        i++
-                    }
+                   if(university.type=="Blood Test"){
+                       list.add(university)
+                       list[i].key = postSnapshot.key.toString()
+                       i++
+                   }
+
 
 
                 }

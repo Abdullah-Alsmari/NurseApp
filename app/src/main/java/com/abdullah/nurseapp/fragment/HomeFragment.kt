@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.databinding.FragmentHomeBinding
 import com.abdullah.nurseapp.adapters.HomeGridAdapter
 import com.abdullah.nurseapp.model.HomeModel
@@ -14,6 +16,8 @@ import com.smarteist.autoimageslider.SliderView
 import com.abdullah.nurseapp.adapters.SliderAdapter
 
 import com.abdullah.nurseapp.model.SliderDataModel
+import com.abdullah.nurseapp.utils.setToolbarTitle
+import com.abdullah.nurseapp.utils.setToolbarTitleWithBackButton
 
 
 class HomeFragment : Fragment(){
@@ -33,16 +37,20 @@ class HomeFragment : Fragment(){
         return binding.root
     }
 
+    private fun setUpToolbar(view: View) {
+        val toolbar = view.findViewById<View>(R.id.toolbar) as Toolbar
+        setToolbarTitle(requireContext(), toolbar, resources.getString(R.string.home))
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as AppCompatActivity).supportActionBar?.title = "Home"
+        setUpToolbar(view)
 
     }
 
     private fun populateData() : List<HomeModel>{
         val list = mutableListOf<HomeModel>()
-        list.add(HomeModel("X-ray"))
-        list.add(HomeModel("Blood Testing"))
+        list.add(HomeModel("X-ray", R.drawable.xrayicon))
+        list.add(HomeModel("Blood Testing",R.drawable.bloodtestingicon))
         return list
 
     }
@@ -68,14 +76,14 @@ class HomeFragment : Fragment(){
         // adding the urls inside array list
         // Urls of our images.
         // Urls of our images.
-        val url1 = "https://www.geeksforgeeks.org/wp-content/uploads/gfg_200X200-1.png"
-        val url2 = "https://qphs.fs.quoracdn.net/main-qimg-8e203d34a6a56345f86f1a92570557ba.webp"
+        val url1 = "https://www.redcross.org/content/dam/redcross/about-us/news/2020/coronavirus-safety-tw.jpg"
+        val url2 = "http://www.genipulse.com/img/slider/slide3-1.png"
         val url3 =
-            "https://bizzbucket.co/wp-content/uploads/2020/08/Life-in-The-Metro-Blog-Title-22.png"
+            "https://sciexaminer.com/wp-content/uploads/2020/07/Healthcare_banner-1.jpg"
 
         sliderDataArrayList.add(SliderDataModel(url1))
-        sliderDataArrayList.add(SliderDataModel(url1))
-        sliderDataArrayList.add(SliderDataModel(url1))
+        sliderDataArrayList.add(SliderDataModel(url2))
+        sliderDataArrayList.add(SliderDataModel(url3))
 
         // passing this array list inside our adapter class.
 

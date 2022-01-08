@@ -10,6 +10,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.abdullah.nurseapp.databinding.FragmentAddXrayBinding
 import com.abdullah.nurseapp.model.AddTaskModel
+import com.abdullah.nurseapp.model.MyDataModel
 import com.abdullah.nurseapp.utils.USERNAME
 import com.abdullah.nurseapp.utils.getStringFromPrefs
 import com.google.android.gms.tasks.OnFailureListener
@@ -17,6 +18,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import android.widget.RadioButton
+
+
+
 
 class AddTaskViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -51,13 +56,6 @@ class AddTaskViewModel(application: Application) : AndroidViewModel(application)
                         _showProgressDialog.value = false
                         val imageUrl = it.toString()
                         addTask(imageUrl,binding)
-                        /*
-                                  // Getting image upload ID.
-                                   val ImageUploadId = databaseReference!!.push().key
-
-                                   // Adding image upload id s child element into databaseReference.
-                                   databaseReference!!.child(ImageUploadId!!).setValue(imageUploadInfo)*/
-
                     }
                 }
 
@@ -79,10 +77,13 @@ class AddTaskViewModel(application: Application) : AndroidViewModel(application)
     }
 
     private fun addTask(imgUrl: String,binding: FragmentAddXrayBinding) {
+        val selectedId: Int = binding.rgType.getCheckedRadioButtonId()
+        val radioButton = binding.rgType.findViewById(selectedId) as RadioButton
         val user = AddTaskModel(
             binding.edTitle.text.toString(),
             binding.edHospName.text.toString(),
-            imgUrl
+            imgUrl,
+            radioButton.text.toString()
         )
         databaseReference!!.child(userName).push().setValue(user)
         binding.edHospName.setText("")

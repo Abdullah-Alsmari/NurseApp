@@ -23,13 +23,17 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="#46B1E1"
         app:itemIconSize="20dp"
+        app:itemTextColor="@drawable/bottom_nav_color"
+        app:itemIconTint="@drawable/bottom_nav_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/home_menu"
-        app:labelVisibilityMode="labeled"/>
+        app:labelVisibilityMode="labeled">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

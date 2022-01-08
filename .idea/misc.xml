@@ -3,22 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/button_rounded_color.xml" value="0.20615384615384616" />
         <entry key="app/src/main/res/drawable/drawable_profile_image_background.xml" value="0.1175925925925926" />
+        <entry key="app/src/main/res/drawable/ic_bx_bxs_check_circle.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/ic_g_login_icon.xml" value="0.20615384615384616" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/ic_home_selected.xml" value="0.20615384615384616" />
         <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.1175925925925926" />
         <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/ic_profile_unselected.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/ic_vector.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/radio_selector.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15172101449275363" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.178125" />
+        <entry key="app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/fragment_add_xray.xml" value="0.19293478260869565" />
         <entry key="app/src/main/res/layout/fragment_blood_test_past_history.xml" value="0.19293478260869565" />
+        <entry key="app/src/main/res/layout/fragment_full_screen_image.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_my_data.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_xray_past_history.xml" value="0.19293478260869565" />
+        <entry key="app/src/main/res/layout/item_change_language.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/layout/item_home.xml" value="0.19293478260869565" />
         <entry key="app/src/main/res/layout/item_xray_history.xml" value="0.19293478260869565" />
         <entry key="app/src/main/res/layout/slider_layout.xml" value="0.19293478260869565" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.16032608695652173" />
         <entry key="app/src/main/res/menu/home_menu.xml" value="0.15" />
       </map>
     </option>

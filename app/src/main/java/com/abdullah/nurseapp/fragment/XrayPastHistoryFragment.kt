@@ -5,14 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.adapters.XrayPastHistoryAdapter
 import com.abdullah.nurseapp.databinding.FragmentXrayPastHistoryBinding
+import com.abdullah.nurseapp.model.AddTaskModel
+import com.abdullah.nurseapp.utils.setToolbarTitle
+import com.abdullah.nurseapp.utils.setToolbarTitleWithBackButton
 import com.abdullah.nurseapp.viewmodel.XrayHistoryViewModel
+import android.content.Intent
+
 
 class XrayPastHistoryFragment : Fragment() {
 
@@ -27,22 +34,58 @@ class XrayPastHistoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentXrayPastHistoryBinding.inflate(inflater, container, false)
-        (activity as AppCompatActivity).supportActionBar?.title = "Xray"
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpToolbar(view)
         viewModel = ViewModelProvider(this).get(XrayHistoryViewModel::class.java)
         observeData()
         setUpRecyclerview()
         viewModel.getXrayHistoryData()
-        binding.fabXray.setOnClickListener {
-            findNavController().navigate(XrayPastHistoryFragmentDirections.actionHistoryToAddFragment())
-        }
-        return binding.root
+
+    }
+
+    private fun setUpToolbar(view: View) {
+        val toolbar = view.findViewById<View>(R.id.toolbar) as Toolbar
+        setToolbarTitleWithBackButton(requireContext(), toolbar, "Past Xray History")
     }
 
     private fun observeData() {
         viewModel.xrayListData.observe(
             viewLifecycleOwner,
             Observer {
-                adapter = XrayPastHistoryAdapter(requireContext(),it)
+                adapter = XrayPastHistoryAdapter(
+                    requireContext(),
+                    it,
+                    object : XrayPastHistoryAdapter.OnItemClickListener {
+                        override fun onItemClick(item: AddTaskModel?) {
+                            findNavController().navigate(
+                                XrayPastHistoryFragmentDirections.actionHistoryToFullScreenImageFragment(
+                                    item!!.imgURL!!
+                                )
+                            )
+                        }
+
+                        override fun onDeleteClick(item: AddTaskModel?) {
+                            viewModel.deleteItem(item!!.key)
+                            viewModel.getXrayHistoryData()
+
+                        }
+
+                        override fun onShareClick(item: AddTaskModel?) {
+                            val sendIntent = Intent()
+                            sendIntent.action = Intent.ACTION_SEND
+                            sendIntent.putExtra(
+                                Intent.EXTRA_TEXT,
+                                item!!.title
+                            )
+                            sendIntent.type = "text/plain"
+                            startActivity(sendIntent)
+                        }
+
+                    })
                 binding.rvXrayHistory.adapter = adapter
 
             })
