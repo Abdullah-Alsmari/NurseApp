@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.nurseapp.fragment.HomeFragment"
+        android:name="com.abdullah.nurseapp.fragment.HomeFragment"
        >
         <action
             android:id="@+id/action_homeFragment_to_xrayPastHistoryFragment"
@@ -19,26 +19,50 @@
     </fragment>
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="com.example.nurseapp.fragment.ProfileFragment"
-        android:label="UserProfileFragment"/>
+        android:name="com.abdullah.nurseapp.fragment.ProfileFragment"
+        android:label="UserProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_myDataFragment"
+            app:destination="@id/mydataFragment"
+            />
+    </fragment>
     <fragment
         android:id="@+id/xrayPastHistoryFragment"
-        android:name="com.example.nurseapp.fragment.XrayPastHistoryFragment"
+        android:name="com.abdullah.nurseapp.fragment.XrayPastHistoryFragment"
        >
         <action
             android:id="@+id/action_history_to_addFragment"
-            app:destination="@id/addXrayFragment"
+            app:destination="@id/addTaskFragment"
+            />
+        <action
+            android:id="@+id/action_history_to_FullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment"
             />
 
     </fragment>
     <fragment
         android:id="@+id/bloodTestPastHistoryFragment"
-        android:name="com.example.nurseapp.fragment.BloodTestPastHistoryFragment"
+        android:name="com.abdullah.nurseapp.fragment.BloodTestPastHistoryFragment"
         android:label="BloodTestPastHistoryFragment">
+        <action
+            android:id="@+id/action_history_to_FullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment"
+            />
     </fragment>
     <fragment
-        android:id="@+id/addXrayFragment"
-        android:name="com.example.nurseapp.fragment.AddXrayFragment"
-        android:label="AddXrayFragment">
+        android:id="@+id/addTaskFragment"
+        android:name="com.abdullah.nurseapp.fragment.AddTaskFragment"
+        android:label="AddTaskFragment"></fragment>
+    <fragment
+        android:id="@+id/fullScreenImageFragment"
+        android:name="com.abdullah.nurseapp.fragment.FullScreenImageFragment"
+        android:label="FullScreenImageFragment">
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/mydataFragment"
+        android:name="com.abdullah.nurseapp.fragment.MyDataFragment"
+        android:label="MydataFragment"></fragment>
   </navigation>
