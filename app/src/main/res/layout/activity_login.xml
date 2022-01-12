@@ -3,17 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    >
 
-    <Button
+
+    <ImageView
+        android:id="@+id/iv_app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/splashimage" />
+
+    <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/signIn"
-        android:text="Sign in with Google"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp"
+        android:text="Please login to continue"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/signIn"/>
+
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#46B1E1"
+        android:textAllCaps="false"
+        android:drawablePadding="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@drawable/button_rounded_color"
+        android:drawableStart="@drawable/ic_g_login_icon"
+        android:drawableLeft="@drawable/ic_g_login_icon"
+        android:text="Login With Google"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
