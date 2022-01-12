@@ -25,7 +25,7 @@
         android:layout_height="wrap_content">
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/imgDocument"
             android:layout_width="150dp"
             app:civ_border_color="@color/colorPrimary"

@@ -20,6 +20,9 @@ class BloodTestViewModel(application: Application) : AndroidViewModel(applicatio
     private val _xrayListData = MutableLiveData<List<AddTaskModel>>()
     val xrayListData: LiveData<List<AddTaskModel>>
         get() = _xrayListData
+
+
+
     var databaseReference: DatabaseReference? = null
     var Database_Path = "PatientHistoryDatabase"
     var userName = ""
