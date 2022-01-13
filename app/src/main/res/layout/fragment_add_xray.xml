@@ -7,13 +7,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include
-            android:id="@+id/layoutToolbar"
-            layout="@layout/toolbar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_scrollFlags="enterAlways" />
+    <include
+        android:id="@+id/layoutToolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="enterAlways" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="46dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutToolbar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -23,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutToolbar">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edTitle"
@@ -58,19 +69,19 @@
             app:layout_constraintTop_toBottomOf="@+id/hospital_text_input">
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:checked="true"
                 android:id="@+id/xray"
-                android:textSize="16sp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xray" />
+                android:checked="true"
+                android:text="Xray"
+                android:textSize="16sp" />
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:textSize="16sp"
                 android:id="@+id/bloodTest"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Blood Test" />
+                android:text="Blood Test"
+                android:textSize="16sp" />
         </RadioGroup>
 
         <LinearLayout
@@ -117,6 +128,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/previewImage" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
