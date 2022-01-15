@@ -5,93 +5,105 @@
 
     <data>
 
-        <import type="android.view.View"/>
-        </data>
+        <import type="android.view.View" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/circleImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+        <View
+            android:id="@+id/emptyView"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:src="@drawable/drawable_profile_image_background"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
 
+            android:padding="5dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emptyView">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                android:text="A"
-                app:layout_constraintBottom_toBottomOf="@id/imageView3"
-                app:layout_constraintEnd_toEndOf="@id/imageView3"
-                app:layout_constraintStart_toStartOf="@id/imageView3"
-                app:layout_constraintTop_toTopOf="@id/imageView3" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/circleImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/circleImageView"
-            app:layout_constraintTop_toTopOf="@+id/circleImageView"
-            tools:text="Abdullah Alsmari" />
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:src="@drawable/drawable_profile_image_background"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/userMobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:visibility="gone"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/userName"
-            app:layout_constraintTop_toBottomOf="@+id/userName"
-            tools:text="+9665051812550" />
 
-        <TextView
-            android:id="@+id/userEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/userMobile"
-            app:layout_constraintTop_toBottomOf="@+id/userMobile"
-            tools:text="abdullah@gmail.com" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A"
+                        android:textColor="@color/white"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageView3"
+                        app:layout_constraintEnd_toEndOf="@id/imageView3"
+                        app:layout_constraintStart_toStartOf="@id/imageView3"
+                        app:layout_constraintTop_toTopOf="@id/imageView3" />
 
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/circleImageView"
+                    app:layout_constraintTop_toTopOf="@+id/circleImageView"
+                    tools:text="Abdullah Alsmari" />
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userName"
+                    app:layout_constraintTop_toBottomOf="@+id/userName"
+                    tools:text="abdullah@gmail.com" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="#C7C7CC"
             android:layout_marginTop="50dp"
-            app:layout_constraintEnd_toEndOf="@id/userEmail"
-            app:layout_constraintStart_toStartOf="@+id/userEmail"
-            app:layout_constraintTop_toBottomOf="@+id/userEmail" />
+            android:background="#C7C7CC"
+            app:layout_constraintEnd_toEndOf="@id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -108,18 +120,18 @@
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:layout_marginStart="40dp"
-                android:src="@drawable/ic_logout"
+                android:src="@drawable/ic_bx_bx_user"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/tvProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:text="Logout"
-                android:id="@+id/tvLogout"
+                android:text="My Profile"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -128,10 +140,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
+            android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#C7C7CC"
-            android:id="@+id/divider"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
             app:layout_constraintStart_toStartOf="@id/constraintLayout2"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
@@ -151,18 +163,18 @@
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:layout_marginStart="40dp"
-                android:src="@drawable/ic_logout"
+                android:src="@drawable/download"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/changeLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:text="Change Language"
-                android:id="@+id/changeLanguage"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView33"
@@ -171,13 +183,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
+            android:id="@+id/divider3"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#C7C7CC"
-            android:id="@+id/divider3"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
             app:layout_constraintStart_toStartOf="@id/constraintLayout3"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout4"
             android:layout_width="0dp"
@@ -200,11 +213,11 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/tvLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:text="My Profile"
-                android:id="@+id/tvProfile"
+                android:text="Logout"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageViewProfile"
@@ -213,10 +226,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
+            android:id="@+id/divider4"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#C7C7CC"
-            android:id="@+id/divider4"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
             app:layout_constraintStart_toStartOf="@id/constraintLayout3"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
@@ -224,11 +237,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="App Version : 1.0.0"
             android:layout_marginStart="40dp"
-            android:textSize="14sp"
             android:layout_marginBottom="8dp"
+            android:text="App Version : 1.0.0"
+            android:textColor="@color/black"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
