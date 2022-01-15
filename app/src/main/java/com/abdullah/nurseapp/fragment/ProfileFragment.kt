@@ -39,7 +39,6 @@ class ProfileFragment : Fragment() {
         val phoneNumber = getStringFromPrefs(requireActivity(), PHONENUMBER)
         binding.userEmail.setText(email)
         binding.userName.setText(name)
-        binding.userMobile.setText(phoneNumber)
         binding.tvLogout.setOnClickListener {
             logOut()
         }

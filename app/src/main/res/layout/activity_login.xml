@@ -8,16 +8,19 @@
     >
 
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/iv_app_logo"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="220dp"
-        android:contentDescription="@null"
+        app:lottie_fileName="40349-nursing.json"
+        app:lottie_autoPlay="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splashimage" />
+
+        app:lottie_loop="true"/>
 
     <TextView
         android:id="@+id/tvLogin"
