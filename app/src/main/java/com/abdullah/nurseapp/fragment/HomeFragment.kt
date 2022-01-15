@@ -51,8 +51,6 @@ class HomeFragment : Fragment(){
         val list = mutableListOf<HomeModel>()
         list.add(HomeModel("X-ray", R.drawable.xrayicon))
         list.add(HomeModel("Blood Testing",R.drawable.bloodtestingicon))
-        list.add(HomeModel("Blood Testing",R.drawable.bloodtestingicon))
-        list.add(HomeModel("Blood Testing",R.drawable.bloodtestingicon))
         return list
 
     }
