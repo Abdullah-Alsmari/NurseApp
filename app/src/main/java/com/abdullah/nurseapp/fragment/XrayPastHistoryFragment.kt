@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -15,7 +14,6 @@ import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.adapters.XrayPastHistoryAdapter
 import com.abdullah.nurseapp.databinding.FragmentXrayPastHistoryBinding
 import com.abdullah.nurseapp.model.AddTaskModel
-import com.abdullah.nurseapp.utils.setToolbarTitle
 import com.abdullah.nurseapp.utils.setToolbarTitleWithBackButton
 import com.abdullah.nurseapp.viewmodel.XrayHistoryViewModel
 import android.content.Intent
@@ -49,7 +47,7 @@ class XrayPastHistoryFragment : Fragment() {
 
     private fun setUpToolbar(view: View) {
         val toolbar = view.findViewById<View>(R.id.toolbar) as Toolbar
-        setToolbarTitleWithBackButton(requireContext(), toolbar, "Past Xray History")
+        setToolbarTitleWithBackButton(requireContext(), toolbar, resources.getString(R.string.Past_Xray_History))
     }
 
     private fun observeData() {

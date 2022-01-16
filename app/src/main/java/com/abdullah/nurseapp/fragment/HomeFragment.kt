@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.abdullah.nurseapp.R
@@ -17,7 +16,6 @@ import com.abdullah.nurseapp.adapters.SliderAdapter
 
 import com.abdullah.nurseapp.model.SliderDataModel
 import com.abdullah.nurseapp.utils.setToolbarTitle
-import com.abdullah.nurseapp.utils.setToolbarTitleWithBackButton
 
 
 class HomeFragment : Fragment(){
@@ -49,8 +47,8 @@ class HomeFragment : Fragment(){
 
     private fun populateData() : List<HomeModel>{
         val list = mutableListOf<HomeModel>()
-        list.add(HomeModel("X-ray", R.drawable.xrayicon))
-        list.add(HomeModel("Blood Testing",R.drawable.bloodtestingicon))
+        list.add(HomeModel(R.string.xray, R.drawable.xrayicon))
+        list.add(HomeModel(R.string.blood_test,R.drawable.bloodtestingicon))
         return list
 
     }

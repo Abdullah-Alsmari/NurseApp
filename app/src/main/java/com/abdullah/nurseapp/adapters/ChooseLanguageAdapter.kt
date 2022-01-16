@@ -25,7 +25,7 @@ class ChooseLanguageAdapter(private val mList: List<ChooseLanguageModel>,var onI
 
         val ItemsViewModel = mList[position]
 
-        holder.textView.text = ItemsViewModel.language
+        holder.textView.text = ItemsViewModel.language.toString()
         holder.radioButton.isChecked = ItemsViewModel.isSelected
         holder.radioButton.setOnClickListener {
             ItemsViewModel.isSelected = holder.radioButton.isChecked

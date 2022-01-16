@@ -21,7 +21,6 @@ import com.abdullah.nurseapp.model.ChooseLanguageModel
 import com.abdullah.nurseapp.utils.*
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
-import org.intellij.lang.annotations.Language
 import java.util.*
 
 class ProfileFragment : Fragment() {
@@ -48,21 +47,21 @@ class ProfileFragment : Fragment() {
         binding.tvProfile.setOnClickListener {
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToMyDataFragment())
         }
-        (activity as AppCompatActivity).supportActionBar?.title = "Profile"
+        (activity as AppCompatActivity).supportActionBar?.title = R.string.profile.toString()
         return binding.root
     }
 
     private fun logOut() {
         AlertDialog.Builder(requireActivity())
         val builder = android.app.AlertDialog.Builder(context)
-        builder.setTitle("Are you sure you want to sign out?")
-        builder.setPositiveButton("Yes") { _, _ ->
+        builder.setTitle(R.string.Are_you_sure)
+        builder.setPositiveButton(R.string.yes) { _, _ ->
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(requireActivity(), LoginActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
         }
-        builder.setNegativeButton("No") { dialog, _ ->
+        builder.setNegativeButton(R.string.No) { dialog, _ ->
             dialog.cancel()
         }
         builder.create().show()
@@ -76,11 +75,11 @@ class ProfileFragment : Fragment() {
         val dataList = mutableListOf<ChooseLanguageModel>()
         if (getStringFromPrefs(requireActivity(), LANGUAGECODE) == "en") {
             dataList.add(ChooseLanguageModel("English", true))
-            dataList.add(ChooseLanguageModel("Arabic", false))
+            dataList.add(ChooseLanguageModel("العربية", false))
 
         } else {
-            dataList.add(ChooseLanguageModel("English", false))
-            dataList.add(ChooseLanguageModel("Arabic", true))
+            dataList.add(ChooseLanguageModel("English" ,false))
+            dataList.add(ChooseLanguageModel("العربية",true))
 
         }
         val adapter =

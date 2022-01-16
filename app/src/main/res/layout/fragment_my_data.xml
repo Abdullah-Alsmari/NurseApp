@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:inputType="number"
                 android:layout_height="wrap_content"
-                android:hint="Please specify age" />
+                android:hint="@string/please_specify_age" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/age_text_input"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_height="wrap_content"
-            android:hint="Select Blood Group">
+            android:hint="@string/select_blood_group">
 
             <AutoCompleteTextView
                 android:id="@+id/filled_blood_group_dropdown"
@@ -68,7 +68,7 @@
                 android:id="@+id/edCondition"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:hint="Please specify (if any...)" />
+                android:hint="@string/please_specify_if_any" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Update Details"
+            android:text="@string/update_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
