@@ -58,7 +58,7 @@ class MyDataViewModel(application: Application) : AndroidViewModel(application) 
         binding.edAge.setText("")
         binding.filledBloodGroupDropdown.setText("")
         binding.edCondition.setText("")
-        Toast.makeText(getApplication(), "Data added Successfully!!!", Toast.LENGTH_LONG).show()
+        Toast.makeText(getApplication(),"Data added Successfully!!!", Toast.LENGTH_LONG).show()
 
     }
 

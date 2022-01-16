@@ -17,12 +17,10 @@ import android.net.Uri
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.utils.setToolbarTitleWithBackButton
 import com.abdullah.nurseapp.viewmodel.AddTaskViewModel
 import java.io.IOException
-import com.google.android.material.snackbar.Snackbar
-
-import com.jaredrummler.materialspinner.MaterialSpinner
 
 
 class AddTaskFragment : Fragment() {
@@ -66,7 +64,7 @@ class AddTaskFragment : Fragment() {
 
     private fun setUpToolbar(view: View) {
         val toolbar = view.findViewById<View>(com.abdullah.nurseapp.R.id.toolbar) as Toolbar
-        setToolbarTitleWithBackButton(requireContext(), toolbar, "Add Task")
+        setToolbarTitleWithBackButton(requireContext(), toolbar, resources.getString(R.string.addTask))
     }
 
     private fun observeData() {
@@ -100,7 +98,7 @@ class AddTaskFragment : Fragment() {
     private fun initProgressDialog() {
         progressDialog = ProgressDialog(requireActivity())
         progressDialog.setCancelable(false)
-        progressDialog.setTitle("Please wait")
-        progressDialog.setMessage("Uploading document...")
+        progressDialog.setTitle(R.string.dialog_wait)
+        progressDialog.setMessage(R.string.Uploading_document.toString())
     }
 }

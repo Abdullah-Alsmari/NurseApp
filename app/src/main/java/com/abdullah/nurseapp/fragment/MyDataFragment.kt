@@ -9,9 +9,9 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.abdullah.nurseapp.databinding.FragmentMyDataBinding
 import com.abdullah.nurseapp.utils.*
-import java.util.*
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.viewmodel.MyDataViewModel
 
 
@@ -69,14 +69,14 @@ class MyDataFragment : Fragment() {
 
     private fun setUpToolbar(view: View) {
         val toolbar = view.findViewById<View>(com.abdullah.nurseapp.R.id.toolbar) as Toolbar
-        setToolbarTitleWithBackButton(requireContext(), toolbar, "My Profile")
+        setToolbarTitleWithBackButton(requireContext(), toolbar,resources.getString(R.string.my_profile))
     }
 
     private fun initProgressDialog() {
         progressDialog = ProgressDialog(requireActivity())
         progressDialog.setCancelable(false)
-        progressDialog.setTitle("Please wait")
-        progressDialog.setMessage("Getting details...")
+        progressDialog.setTitle(R.string.dialog_wait)
+        progressDialog.setMessage(R.string.dialog_Getting_details.toString())
     }
 
 

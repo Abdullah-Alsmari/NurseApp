@@ -8,7 +8,7 @@ import androidx.appcompat.widget.Toolbar
 
 fun setToolbarTitleWithBackButton(context: Context, toolbar: Toolbar, title: String) {
 
-    toolbar.title = title
+    toolbar.title = title.toString()
     (context as AppCompatActivity).setSupportActionBar(toolbar)
     val actionBar: ActionBar? = (context).supportActionBar
     toolbar.setNavigationOnClickListener { view: View? -> (context as AppCompatActivity).onBackPressed() }

@@ -1,7 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home">      مسكن</string>
-
+    <string name="app_name">NurseApp</string>
+    <string name="home">      الصفحه الرئيسية</string>
+    <string name="addTask"> اضافة ملف</string>
+    <string name="profile">الملف الخاص بي</string>
+    <string name="MyProfile">ملفي </string>
+    <string name="dialog_wait">الرجاءالانتظار</string>
+    <string name="dialog_Getting_details">جلب البيانات ...</string>
+    <string name="please_login_to_continue">الرجاء تسجيل الدخول </string>
+    <string name="login_with_google">تسجيل الدخول بجوجل</string>
+    <string name="select_preferred_language">اختر اللغة</string>
+    <string name="add_title">اسم عنوان</string>
+    <string name="hospital_name">اسم المستشفى</string>
+    <string name="xray">الأشعة</string>
+    <string name="blood_test">تحاليل الدم</string>
+    <string name="tollbartasks">ملفاتي</string>
+    <string name="add_document">اضافة ملف</string>
+    <string name="add">اضافة</string>
+    <string name="please_specify_age">الرجاء ادخال العمر</string>
+    <string name="select_blood_group">اختر نوع الدم</string>
+    <string name="please_specify_if_any"> الرجاء ادخال  اي تفاصيل اخرى  ...</string>
+    <string name="update_details">تحديث البيانات </string>
+    <string name="my_profile">ملفي</string>
+    <string name="change_language">تغير اللغة</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="app_version_1_0_0">App Version : 1.0.0</string>
+    <string name="Uploading_document">جلب البيانات ...</string>
+    <string name="Past_Xray_History">البيانات  </string>
+    <string name="Data_added_Successfully">Data added Successfully</string>
+    <string name="Arabic">العربية</string>
+    <string name="English">English</string>
+    <string name="yes">نعم</string>
+    <string name="No">لا</string>
+    <string name="Are_you_sure"> هل انت متآكد من تسجيل الخروج ؟</string>
 
 
 </resources>
