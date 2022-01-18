@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.databinding.ItemHomeBinding
 import com.abdullah.nurseapp.fragment.HomeFragmentDirections
 
@@ -22,7 +23,7 @@ class HomeGridAdapter() :
             binding.home = item
             binding.executePendingBindings()
             binding.cardView.setOnClickListener {
-                if (item.name.equals("X-ray")) {
+                if (item.icon== R.drawable.xrayicon) {
                     action = HomeFragmentDirections.actionHomeFragmentToXrayPastHistoryFragment()
                 } else {
                     action = HomeFragmentDirections.actionHomeFragmentToBloodTestPastHistoryFragment()
