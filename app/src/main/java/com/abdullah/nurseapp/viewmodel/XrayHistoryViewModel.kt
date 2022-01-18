@@ -42,7 +42,7 @@ class XrayHistoryViewModel(application: Application) : AndroidViewModel(applicat
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
                     val university: AddTaskModel = postSnapshot.getValue(AddTaskModel::class.java)!!
-                    if(university.type=="Xray"){
+                    if(university.type=="X-ray"){
                         list.add(university)
                         list[i].key = postSnapshot.key.toString()
                         i++

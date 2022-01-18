@@ -33,8 +33,9 @@
             app:layout_constraintTop_toBottomOf="@+id/emptyView">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="394dp"
+                android:layout_height="match_parent"
+                android:background="#865BBAE4">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -75,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/circleImageView"
                     app:layout_constraintTop_toTopOf="@+id/circleImageView"
@@ -86,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/userName"
                     app:layout_constraintTop_toBottomOf="@+id/userName"
@@ -223,6 +224,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/imageViewProfile"
                 app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
                 app:layout_constraintTop_toTopOf="@+id/imageViewProfile" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
@@ -244,6 +246,15 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+<!--        <Switch-->
+<!--            android:id="@+id/switchtheme"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="40dp"-->
+<!--            android:text="Switch Theme"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
