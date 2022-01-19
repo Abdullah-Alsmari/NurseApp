@@ -4,7 +4,7 @@
     <string name="addTask"> اضافة ملف</string>
     <string name="profile">الملف الخاص بي</string>
     <string name="MyProfile">ملفي </string>
-    <string name="dialog_wait">الرجاءالانتظار</string>
+    <string name="dialog_wait">الرجاء الانتظار</string>
     <string name="dialog_Getting_details">جلب البيانات ...</string>
     <string name="please_login_to_continue">الرجاء تسجيل الدخول </string>
     <string name="login_with_google">تسجيل الدخول بجوجل</string>
@@ -24,7 +24,7 @@
     <string name="change_language">تغير اللغة</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="app_version_1_0_0">App Version : 1.0.0</string>
-    <string name="Uploading_document">جلب البيانات ...</string>
+    <string name="Uploading_document">جلب البيانات</string>
     <string name="Past_Xray_History">البيانات  </string>
     <string name="Data_added_Successfully">Data added Successfully</string>
     <string name="Arabic">العربية</string>
@@ -32,6 +32,7 @@
     <string name="yes">نعم</string>
     <string name="No">لا</string>
     <string name="Are_you_sure"> هل انت متآكد من تسجيل الخروج ؟</string>
+    <string name="Pharmecy">Pharmecy</string>
 
 
 </resources>

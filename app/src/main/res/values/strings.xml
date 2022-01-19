@@ -23,7 +23,7 @@
     <string name="change_language">Change Language</string>
     <string name="logout">Logout</string>
     <string name="app_version_1_0_0">App Version : 1.0.0</string>
-    <string name="Uploading_document">Uploading document...</string>
+    <string name="Uploading_document">Uploading document</string>
     <string name="Past_Xray_History">Past  History</string>
 
     <string name="Data_added_Successfully">Data added Successfully</string>
@@ -32,6 +32,7 @@
     <string name="yes">Yes</string>
     <string name="No">No</string>
     <string name="Are_you_sure">Are you sure you want to sign out?</string>
+    <string name="Pharmecy">Pharmecy</string>
 
 
 </resources>

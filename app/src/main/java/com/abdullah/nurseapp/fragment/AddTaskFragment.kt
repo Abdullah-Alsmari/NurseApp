@@ -14,12 +14,15 @@ import android.content.Intent
 import android.provider.MediaStore
 
 import android.net.Uri
+import android.util.Log
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.abdullah.nurseapp.R
 import com.abdullah.nurseapp.utils.setToolbarTitleWithBackButton
 import com.abdullah.nurseapp.viewmodel.AddTaskViewModel
+import kotlinx.coroutines.*
 import java.io.IOException
 
 
@@ -50,9 +53,13 @@ class AddTaskFragment : Fragment() {
         }
         initProgressDialog()
         binding.btnSubmit.setOnClickListener {
-            viewModel.uploadDataToFirebase(FilePathUri, binding)
+            viewModel.uploadDataToFirebase(FilePathUri, binding) //4
+
+
+           /* progressDialog.dismiss()
+            findNavController().navigate(AddTaskFragmentDirections.actionAddTaskFragmentToHomeFragment())*/
         }
-        observeData()
+        observeData123()
 
         return binding.root
     }
@@ -64,7 +71,11 @@ class AddTaskFragment : Fragment() {
 
     private fun setUpToolbar(view: View) {
         val toolbar = view.findViewById<View>(com.abdullah.nurseapp.R.id.toolbar) as Toolbar
-        setToolbarTitleWithBackButton(requireContext(), toolbar, resources.getString(R.string.addTask))
+        setToolbarTitleWithBackButton(
+            requireContext(),
+            toolbar,
+            resources.getString(R.string.addTask)
+        )
     }
 
     private fun observeData() {
@@ -75,6 +86,19 @@ class AddTaskFragment : Fragment() {
                     progressDialog.show()
                 } else {
                     progressDialog.dismiss()
+                 //   findNavController().navigate(AddTaskFragmentDirections.actionAddTaskFragmentToHomeFragment())
+                }
+            })
+    }
+    private fun observeData123() {
+        viewModel.showTextProgressDialog.observe(
+            viewLifecycleOwner,
+            Observer { shouldShow123: String ->
+                if (shouldShow123=="done") {
+                    progressDialog.dismiss()
+                    findNavController().navigate(AddTaskFragmentDirections.actionAddTaskFragmentToHomeFragment())
+                } else if(shouldShow123=="wait" ){
+                    progressDialog.show()
                 }
             })
     }
@@ -99,6 +123,9 @@ class AddTaskFragment : Fragment() {
         progressDialog = ProgressDialog(requireActivity())
         progressDialog.setCancelable(false)
         progressDialog.setTitle(R.string.dialog_wait)
-        progressDialog.setMessage(R.string.Uploading_document.toString())
+        progressDialog.setMessage("Uploading")
+
     }
+
+
 }

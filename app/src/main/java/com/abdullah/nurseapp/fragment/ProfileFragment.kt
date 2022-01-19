@@ -31,7 +31,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // for night Mode
+        //  night Mode Switch
 //        binding.switchtheme.setOnCheckedChangeListener { _, isChecked ->
 //            if (isChecked) {
 //                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)

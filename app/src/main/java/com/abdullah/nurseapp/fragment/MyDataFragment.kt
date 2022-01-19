@@ -76,7 +76,7 @@ class MyDataFragment : Fragment() {
         progressDialog = ProgressDialog(requireActivity())
         progressDialog.setCancelable(false)
         progressDialog.setTitle(R.string.dialog_wait)
-        progressDialog.setMessage(R.string.dialog_Getting_details.toString())
+
     }
 
 

@@ -52,7 +52,11 @@
     <fragment
         android:id="@+id/addTaskFragment"
         android:name="com.abdullah.nurseapp.fragment.AddTaskFragment"
-        android:label="AddTaskFragment"></fragment>
+        android:label="AddTaskFragment">
+        <action
+            android:id="@+id/action_addTaskFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fullScreenImageFragment"
         android:name="com.abdullah.nurseapp.fragment.FullScreenImageFragment"

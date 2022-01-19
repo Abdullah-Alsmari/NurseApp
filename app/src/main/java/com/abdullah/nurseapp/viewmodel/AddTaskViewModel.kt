@@ -19,11 +19,22 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import android.widget.RadioButton
-
-
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
+import com.abdullah.nurseapp.fragment.AddTaskFragmentDirections
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 
 class AddTaskViewModel(application: Application) : AndroidViewModel(application) {
+
+
+   // val showProgressDialog: LiveData<Boolean>
+
+    private val _showTextProgressDialog = MutableLiveData<String>("")
+    val showTextProgressDialog: LiveData<String>
+        get() = _showTextProgressDialog
 
     private val _showProgressDialog = MutableLiveData<Boolean>(false)
     val showProgressDialog: LiveData<Boolean>
@@ -36,39 +47,40 @@ class AddTaskViewModel(application: Application) : AndroidViewModel(application)
     var userName = ""
 
 
-
     init {
         storageReference = FirebaseStorage.getInstance().reference;
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
-        userName= getStringFromPrefs(getApplication(), USERNAME)!!
+        userName = getStringFromPrefs(getApplication(), USERNAME)!!
 
     }
 
-    fun uploadDataToFirebase(fileUri: Uri?,binding: FragmentAddXrayBinding) {
+    fun uploadDataToFirebase(fileUri: Uri?, binding: FragmentAddXrayBinding) {
+
+
         if (fileUri != null) {
+            _showTextProgressDialog.value= "wait"
             _showProgressDialog.value = true
             val storageReference2nd = storageReference!!.child(
                 Storage_Path + System.currentTimeMillis() + "." + GetFileExtension(fileUri)
             )
+
             storageReference2nd.putFile(fileUri)
                 .addOnSuccessListener { taskSnapshot ->
                     taskSnapshot.storage.downloadUrl.addOnSuccessListener {
                         _showProgressDialog.value = false
                         val imageUrl = it.toString()
-                        addTask(imageUrl,binding)
+                        addTask(imageUrl, binding)
+                        _showTextProgressDialog.value = "done"
                     }
                 }
-
                 .addOnFailureListener(OnFailureListener { e ->
-                    Toast.makeText(getApplication(),e.message.toString(),Toast.LENGTH_LONG).show()
+                    Toast.makeText(getApplication(), e.message.toString(), Toast.LENGTH_LONG).show()
                     _showProgressDialog.value = false
                 })
-
-
         }
 
-
     }
+
 
     private fun GetFileExtension(uri: Uri?): String? {
         val contentResolver: ContentResolver = getApplication<Application>().contentResolver
@@ -76,7 +88,7 @@ class AddTaskViewModel(application: Application) : AndroidViewModel(application)
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri!!))
     }
 
-    private fun addTask(imgUrl: String,binding: FragmentAddXrayBinding) {
+    private fun addTask(imgUrl: String, binding: FragmentAddXrayBinding) {
         val selectedId: Int = binding.rgType.getCheckedRadioButtonId()
         val radioButton = binding.rgType.findViewById(selectedId) as RadioButton
         val user = AddTaskModel(
@@ -88,7 +100,7 @@ class AddTaskViewModel(application: Application) : AndroidViewModel(application)
         databaseReference!!.child(userName).push().setValue(user)
         binding.edHospName.setText("")
         binding.edTitle.setText("")
-        Toast.makeText(getApplication(),"Document added Successfully!!!",Toast.LENGTH_LONG).show()
+        Toast.makeText(getApplication(), "Document added Successfully!!!", Toast.LENGTH_LONG).show()
 
     }
 
