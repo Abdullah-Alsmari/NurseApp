@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "223065949340",
-    "project_id": "nurseandroidapp-75319",
-    "storage_bucket": "nurseandroidapp-75319.appspot.com"
+    "project_number": "433428279885",
+    "firebase_url": "https://nurseappdev-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nurseappdev",
+    "storage_bucket": "nurseappdev.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:223065949340:android:346d95f26327ba14a85959",
+        "mobilesdk_app_id": "1:433428279885:android:53ae60e169c8f046c46204",
         "android_client_info": {
           "package_name": "com.abdullah.nurseapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "223065949340-j4mcaglk86om991t79g09n04njflfbp2.apps.googleusercontent.com",
+          "client_id": "433428279885-lcv0ppu7hmjr6o2buferisrgk6icp2v2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abdullah.nurseapp",
+            "certificate_hash": "ecf5dc6fc67178d329868e82a246dfb15fec6f8f"
+          }
+        },
+        {
+          "client_id": "433428279885-mtfud01jho9netiojc51pbjodkcfm0fm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD70i3wIJE-7stD_CRlqO3ksax6d79dZgY"
+          "current_key": "AIzaSyD7vNVtrkoA4XVu_B218sFpfuyR31_cIYo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "223065949340-j4mcaglk86om991t79g09n04njflfbp2.apps.googleusercontent.com",
+              "client_id": "433428279885-mtfud01jho9netiojc51pbjodkcfm0fm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
